@@ -35,4 +35,54 @@ img {
   max-width: 100%;
 }
 
+.container {
+  height: 100vh;
+  display: grid;
+  grid: "img header" 30rem "aside main" 1fr/35rem auto;
+}
+.container__header {
+  grid-area: header;
+}
+.container__picture {
+  grid-area: img;
+}
+.container__aside {
+  grid-area: aside;
+}
+.container__main {
+  grid-area: main;
+}
+
+.header {
+  padding: 6rem 5rem;
+  text-align: center;
+  background: linear-gradient(to right, #2071e7, #00c3ff);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header__title {
+  font-size: 6rem;
+  font-weight: 300;
+  letter-spacing: 2rem;
+}
+.header__description {
+  font-size: 1.5rem;
+  letter-spacing: 0.7rem;
+}
+
+.picture {
+  padding: 7rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+.picture__img {
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */

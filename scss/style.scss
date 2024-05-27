@@ -1,2 +1,65 @@
-@use 'base';
-@use 'variables';
+@use "base";
+@use "variables";
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid:
+    "img header" 30rem
+    "aside main" 1fr / 35rem auto;
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__picture {
+    grid-area: img;
+  }
+
+  &__aside {
+    grid-area: aside;
+  }
+
+  &__main {
+    grid-area: main;
+  }
+}
+
+.header {
+  padding: 6rem 5rem;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    variables.$color-blue,
+    variables.$color-light-blue
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: 2rem;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    letter-spacing: 0.7rem;
+  }
+}
+
+.picture {
+  padding: 7rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: variables.$background-color;
+
+  &__img {
+    border-radius: 50%;
+  }
+}
