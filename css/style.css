@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  color: #333;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 1rem 0 2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
