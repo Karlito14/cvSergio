@@ -167,6 +167,9 @@ img {
   left: calc(90% - 7.5px);
 }
 
+.aside__langue {
+  margin-bottom: 4rem;
+}
 .aside__langue__title {
   font-size: 1.7rem;
   letter-spacing: 0.3rem;
@@ -184,6 +187,25 @@ img {
 }
 .aside__langue__stars .star-modif {
   color: #999;
+}
+
+.aside__social {
+  margin-bottom: 4rem;
+}
+.aside__social__title {
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.aside__social__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.aside__social__container i {
+  width: 50px;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
