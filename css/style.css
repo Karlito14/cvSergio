@@ -120,5 +120,70 @@ img {
   margin-bottom: 1.2rem;
   font-style: italic;
 }
+.aside__skills {
+  margin-bottom: 4rem;
+}
+.aside__skills__title {
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.aside__skills__h3 {
+  text-transform: capitalize;
+  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.bar-skill {
+  margin: 1rem 0 1.5rem;
+  height: 0.5rem;
+  background: #999;
+  position: relative;
+}
+.bar-skill__content, .bar-skill__content--scss, .bar-skill__content--html {
+  height: 0.5rem;
+}
+.bar-skill__content--html {
+  background-color: #dd4b25;
+  width: 95%;
+}
+.bar-skill__content--scss {
+  background-color: #cf649a;
+  width: 90%;
+}
+.bar-skill__dot, .bar-skill__dot--scss, .bar-skill__dot--html {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #2980b9;
+  top: -5px;
+}
+.bar-skill__dot--html {
+  left: calc(95% - 7.5px);
+}
+.bar-skill__dot--scss {
+  left: calc(90% - 7.5px);
+}
+
+.aside__langue__title {
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.aside__langue__h3 {
+  text-transform: capitalize;
+  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+}
+.aside__langue__stars {
+  margin-bottom: 1rem;
+  color: #2071e7;
+}
+.aside__langue__stars .star-modif {
+  color: #999;
+}
 
 /*# sourceMappingURL=style.css.map */
