@@ -1,11 +1,12 @@
 @use "base";
 @use "variables";
+@use "mixins";
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid:
-    "img header" 30rem
+    "img header" 27rem
     "aside main" 1fr / 35rem auto;
 
   &__header {
@@ -61,5 +62,43 @@
 
   &__img {
     border-radius: 50%;
+  }
+}
+
+.aside {
+  background-color: variables.$background-color;
+  border-right: 1px solid #ddd;
+  padding: 4rem;
+
+  &__contact {
+    margin-bottom: 4rem;
+
+    &__title {
+      @include mixins.title-aside;
+    }
+
+    &__h3 {
+      @include mixins.h3-aside;
+    }
+
+    &__p {
+      @include mixins.p-aside;
+    }
+  }
+
+  &__education {
+    margin-bottom: 4rem;
+
+    &__title {
+      @include mixins.title-aside;
+    }
+
+    &__h3 {
+        @include mixins.h3-aside;
+    }
+
+    &__link {
+        @include mixins.p-aside;
+    }
   }
 }

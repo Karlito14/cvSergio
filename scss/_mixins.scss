@@ -1,0 +1,18 @@
+@mixin title-aside {
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+@mixin p-aside {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+
+@mixin h3-aside {
+  text-transform: capitalize;
+  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+}

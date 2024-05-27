@@ -23,22 +23,14 @@ ol, ul {
   list-style: none;
 }
 
-p {
-  margin: 1rem 0;
-}
-
-h1, h2, h3, h4 {
-  margin: 1rem 0 2rem;
-}
-
 img {
   max-width: 100%;
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
-  grid: "img header" 30rem "aside main" 1fr/35rem auto;
+  grid: "img header" 27rem "aside main" 1fr/35rem auto;
 }
 .container__header {
   grid-area: header;
@@ -83,6 +75,50 @@ img {
 }
 .picture__img {
   border-radius: 50%;
+}
+
+.aside {
+  background-color: #fafafa;
+  border-right: 1px solid #ddd;
+  padding: 4rem;
+}
+.aside__contact {
+  margin-bottom: 4rem;
+}
+.aside__contact__title {
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.aside__contact__h3 {
+  text-transform: capitalize;
+  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+}
+.aside__contact__p {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+.aside__education {
+  margin-bottom: 4rem;
+}
+.aside__education__title {
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.aside__education__h3 {
+  text-transform: capitalize;
+  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+}
+.aside__education__link {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=style.css.map */
