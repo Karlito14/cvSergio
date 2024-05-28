@@ -2,6 +2,7 @@
 @use "variables";
 @use "mixins";
 @use "animations";
+@use "media_queries";
 
 .container {
   min-height: 100vh;
@@ -10,6 +11,16 @@
     "img header" 27rem
     "aside main" 1fr
     "footer footer" / 35rem auto;
+
+  @include media_queries.sm {
+    grid:
+    "header" auto
+    "img" auto
+    "main" auto
+    "aside" auto
+    "footer" auto / 100%
+    ;
+  }
 
   &__header {
     grid-area: header;
@@ -42,11 +53,19 @@
   justify-content: center;
   align-items: center;
 
+  @include media_queries.sm {
+    padding: 3rem
+  }
+
   &__title {
     font-size: 6rem;
     font-weight: 300;
     letter-spacing: 2rem;
     margin-bottom: 2rem;
+
+    @include media_queries.sm {
+      font-size: 4rem;
+    }
 
     span {
       display: inline-block;
@@ -57,6 +76,10 @@
   &__description {
     font-size: 1.5rem;
     letter-spacing: 0.7rem;
+
+    @include media_queries.sm {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -68,8 +91,17 @@
   align-items: center;
   background-color: variables.$background-color;
 
+  @include media_queries.sm {
+    padding: 3rem;
+    width: 100%;
+  }
+
   &__img {
     border-radius: 50%;
+
+    @include media_queries.sm {
+      width: 200px;
+    }
   }
 }
 
@@ -77,6 +109,16 @@
   background-color: variables.$background-color;
   border-right: 1px solid variables.$color-grey-light;
   padding: 4rem;
+
+  @include media_queries.md {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  @include media_queries.sm {
+    padding: 3rem;
+  }
 
   &__contact {
     margin-bottom: 4rem;
@@ -219,6 +261,10 @@
 .container__main {
   padding: 5rem;
 
+  @include media_queries.sm {
+    padding: 3rem;
+  }
+
   &__title {
     margin-bottom: 4rem;
     text-transform: uppercase;
@@ -269,6 +315,10 @@
   color: white;
   background-color: variables.$color-text;
 
+  @include media_queries.sm {
+    padding: 3rem;
+  }
+
   &__title {
     margin-bottom: 3rem;
   }
@@ -290,7 +340,7 @@
 
     &__input {
       padding: 1rem 2rem;
-      min-width: 40rem;
+      max-width: 40rem;
       border: none;
       outline: none;
       font-size: 1.5rem;

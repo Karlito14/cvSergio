@@ -19,7 +19,8 @@ a {
   color: #333;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -52,6 +53,11 @@ img {
   display: grid;
   grid: "img header" 27rem "aside main" 1fr "footer footer"/35rem auto;
 }
+@media screen and (max-width: 767px) {
+  .container {
+    grid: "header" auto "img" auto "main" auto "aside" auto "footer" auto/100%;
+  }
+}
 .container__header {
   grid-area: header;
 }
@@ -75,11 +81,21 @@ img {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 3rem;
+  }
+}
 .header__title {
   font-size: 6rem;
   font-weight: 300;
   letter-spacing: 2rem;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .header__title {
+    font-size: 4rem;
+  }
 }
 .header__title span {
   display: inline-block;
@@ -88,6 +104,11 @@ img {
 .header__description {
   font-size: 1.5rem;
   letter-spacing: 0.7rem;
+}
+@media screen and (max-width: 767px) {
+  .header__description {
+    font-size: 1.2rem;
+  }
 }
 
 .picture {
@@ -98,14 +119,37 @@ img {
   align-items: center;
   background-color: #fafafa;
 }
+@media screen and (max-width: 767px) {
+  .picture {
+    padding: 3rem;
+    width: 100%;
+  }
+}
 .picture__img {
   border-radius: 50%;
+}
+@media screen and (max-width: 767px) {
+  .picture__img {
+    width: 200px;
+  }
 }
 
 .aside {
   background-color: #fafafa;
   border-right: 1px solid #ddd;
   padding: 4rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 767px) {
+  .aside {
+    padding: 3rem;
+  }
 }
 .aside__contact {
   margin-bottom: 4rem;
@@ -244,6 +288,11 @@ img {
 .container__main {
   padding: 5rem;
 }
+@media screen and (max-width: 767px) {
+  .container__main {
+    padding: 3rem;
+  }
+}
 .container__main__title {
   margin-bottom: 4rem;
   text-transform: uppercase;
@@ -288,6 +337,11 @@ img {
   color: white;
   background-color: #333;
 }
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 3rem;
+  }
+}
 .footer__title {
   margin-bottom: 3rem;
 }
@@ -303,7 +357,7 @@ img {
 }
 .footer__form__input {
   padding: 1rem 2rem;
-  min-width: 40rem;
+  max-width: 40rem;
   border: none;
   outline: none;
   font-size: 1.5rem;
