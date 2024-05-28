@@ -59,6 +59,7 @@ img {
   font-size: 6rem;
   font-weight: 300;
   letter-spacing: 2rem;
+  margin-bottom: 2rem;
 }
 .header__description {
   font-size: 1.5rem;
@@ -189,9 +190,6 @@ img {
   color: #999;
 }
 
-.aside__social {
-  margin-bottom: 4rem;
-}
 .aside__social__title {
   font-size: 1.7rem;
   letter-spacing: 0.3rem;
@@ -206,6 +204,43 @@ img {
 .aside__social__container i {
   width: 50px;
   font-size: 2rem;
+}
+
+.container__main {
+  padding: 5rem;
+}
+.container__main__title {
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+.container__main > p {
+  letter-spacing: 0.1rem;
+  line-height: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.experience-bloc {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+.experience-bloc__date {
+  text-align: center;
+  padding-right: 2rem;
+  color: #999;
+}
+.experience-bloc__text {
+  border-left: 1px solid #ddd;
+  padding-left: 2rem;
+}
+.experience-bloc__text__company {
+  display: block;
+  color: #999;
+  margin: 1rem 0;
+}
+.experience-bloc__text__description {
+  letter-spacing: 0.1rem;
+  line-height: 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

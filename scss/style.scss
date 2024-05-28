@@ -44,6 +44,7 @@
     font-size: 6rem;
     font-weight: 300;
     letter-spacing: 2rem;
+    margin-bottom: 2rem;
   }
 
   &__description {
@@ -67,7 +68,7 @@
 
 .aside {
   background-color: variables.$background-color;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid variables.$color-grey-light;
   padding: 4rem;
 
   &__contact {
@@ -179,7 +180,6 @@
 }
 
 .aside__social {
-    margin-bottom: 4rem;
 
     &__title {
         @include mixins.title-aside;
@@ -195,4 +195,47 @@
             font-size: 2rem;
         }
     }
+}
+
+.container__main {
+    padding: 5rem;
+
+    &__title {
+        margin-bottom: 4rem;
+        text-transform: uppercase;
+    }
+
+    & > p {
+        letter-spacing: 0.1rem;
+        line-height: 2.5rem;
+        margin-bottom: 4rem;
+    }
+}
+
+.experience-bloc {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+
+  &__date {
+    text-align: center;
+    padding-right: 2rem;
+    color: variables.$color-hint;
+  }
+
+  &__text {
+    border-left: 1px solid variables.$color-grey-light;
+    padding-left: 2rem;
+
+    &__company {
+      display: block;
+      color: variables.$color-hint;
+      margin: 1rem 0;
+    }
+
+    &__description {
+      letter-spacing: 0.1rem;
+      line-height: 2.5rem;
+    }
+  }
 }
