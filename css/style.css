@@ -30,7 +30,7 @@ img {
 .container {
   min-height: 100vh;
   display: grid;
-  grid: "img header" 27rem "aside main" 1fr/35rem auto;
+  grid: "img header" 27rem "aside main" 1fr "footer footer"/35rem auto;
 }
 .container__header {
   grid-area: header;
@@ -241,6 +241,56 @@ img {
 .experience-bloc__text__description {
   letter-spacing: 0.1rem;
   line-height: 2.5rem;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: #333;
+}
+.footer__title {
+  margin-bottom: 3rem;
+}
+.footer__form {
+  display: flex;
+}
+.footer__form__envelope {
+  font-size: 2rem;
+  background: linear-gradient(to right, #2980b9, #00c3ff);
+  padding: 1rem 2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.footer__form__input {
+  padding: 1rem 2rem;
+  min-width: 40rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+}
+.footer__form__input::placeholder {
+  color: #333;
+}
+.footer__form__button {
+  padding: 1rem 2rem;
+  border: none;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  cursor: pointer;
+  background: linear-gradient(to left, #2980b9, #00c3ff);
+  transition: all 0.3s;
+}
+.footer__form__button:hover {
+  opacity: 0.8;
+}
+.footer__form__button > i {
+  font-size: 2rem;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

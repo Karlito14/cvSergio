@@ -7,7 +7,8 @@
   display: grid;
   grid:
     "img header" 27rem
-    "aside main" 1fr / 35rem auto;
+    "aside main" 1fr 
+    "footer footer" / 35rem auto;
 
   &__header {
     grid-area: header;
@@ -236,6 +237,64 @@
     &__description {
       letter-spacing: 0.1rem;
       line-height: 2.5rem;
+    }
+  }
+}
+
+.footer {
+  grid-area: footer;
+  padding: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: variables.$color-text;
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__form {
+    display: flex;
+
+    &__envelope {
+      font-size: 2rem;
+      background: linear-gradient(to right, variables.$color-dark-blue, variables.$color-light-blue);
+      padding: 1rem 2rem;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+    }
+
+    &__input {
+      padding: 1rem 2rem;
+      min-width: 40rem;
+      border: none;
+      outline: none;
+      font-size: 1.5rem;
+
+      &::placeholder {
+        color: variables.$color-text;
+      }
+    }
+
+    &__button {
+      padding: 1rem 2rem;
+      border: none;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      cursor: pointer;
+      background: linear-gradient(to left, variables.$color-dark-blue, variables.$color-light-blue);
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      & > i {
+        font-size: 2rem;
+        color: white;
+      }
     }
   }
 }
