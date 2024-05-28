@@ -1,13 +1,14 @@
 @use "base";
 @use "variables";
 @use "mixins";
+@use "animations";
 
 .container {
   min-height: 100vh;
   display: grid;
   grid:
     "img header" 27rem
-    "aside main" 1fr 
+    "aside main" 1fr
     "footer footer" / 35rem auto;
 
   &__header {
@@ -46,6 +47,11 @@
     font-weight: 300;
     letter-spacing: 2rem;
     margin-bottom: 2rem;
+
+    span {
+      display: inline-block;
+      animation: bounce 2s;
+    }
   }
 
   &__description {
@@ -160,57 +166,69 @@
 }
 
 .aside__langue {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 
-    &__title {
-        @include mixins.title-aside;
+  &__title {
+    @include mixins.title-aside;
+  }
+
+  &__h3 {
+    @include mixins.h3-aside;
+  }
+
+  &__stars {
+    margin-bottom: 1rem;
+    color: variables.$color-blue;
+
+    .star-modif {
+      color: variables.$color-hint;
     }
-
-    &__h3 {
-        @include mixins.h3-aside;
-    }
-
-    &__stars {
-        margin-bottom: 1rem;
-        color: variables.$color-blue;
-
-        .star-modif {
-            color: variables.$color-hint
-        }
-    }
+  }
 }
 
 .aside__social {
+  &__title {
+    @include mixins.title-aside;
+  }
 
-    &__title {
-        @include mixins.title-aside;
+  &__container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+    padding: 1rem;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: darken(variables.$background-color, 5%);
+
+      i {
+        color: variables.$color-blue;
+        scale: 1.1;
+      }
     }
 
-    &__container {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-
-        i {
-            width: 50px;
-            font-size: 2rem;
-        }
+    i {
+      width: 50px;
+      font-size: 2rem;
+      transition: all 0.2s;
     }
+  }
 }
 
 .container__main {
-    padding: 5rem;
+  padding: 5rem;
 
-    &__title {
-        margin-bottom: 4rem;
-        text-transform: uppercase;
-    }
+  &__title {
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+  }
 
-    & > p {
-        letter-spacing: 0.1rem;
-        line-height: 2.5rem;
-        margin-bottom: 4rem;
-    }
+  & > p {
+    letter-spacing: 0.1rem;
+    line-height: 2.5rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .experience-bloc {
@@ -260,7 +278,11 @@
 
     &__envelope {
       font-size: 2rem;
-      background: linear-gradient(to right, variables.$color-dark-blue, variables.$color-light-blue);
+      background: linear-gradient(
+        to right,
+        variables.$color-dark-blue,
+        variables.$color-light-blue
+      );
       padding: 1rem 2rem;
       border-top-left-radius: 1rem;
       border-bottom-left-radius: 1rem;
@@ -284,7 +306,11 @@
       border-top-right-radius: 1rem;
       border-bottom-right-radius: 1rem;
       cursor: pointer;
-      background: linear-gradient(to left, variables.$color-dark-blue, variables.$color-light-blue);
+      background: linear-gradient(
+        to left,
+        variables.$color-dark-blue,
+        variables.$color-light-blue
+      );
       transition: all 0.3s;
 
       &:hover {

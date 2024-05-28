@@ -27,6 +27,26 @@ img {
   max-width: 100%;
 }
 
+@keyframes bounce {
+  0% {
+    rotate: -45deg;
+  }
+  10% {
+    rotate: -35deg;
+  }
+  70% {
+    rotate: 20deg;
+  }
+  80% {
+    rotate: -10deg;
+  }
+  90% {
+    rotate: 5deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
 .container {
   min-height: 100vh;
   display: grid;
@@ -60,6 +80,10 @@ img {
   font-weight: 300;
   letter-spacing: 2rem;
   margin-bottom: 2rem;
+}
+.header__title span {
+  display: inline-block;
+  animation: bounce 2s;
 }
 .header__description {
   font-size: 1.5rem;
@@ -200,10 +224,21 @@ img {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  transition: all 0.3s;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.aside__social__container:hover {
+  background-color: #ededed;
+}
+.aside__social__container:hover i {
+  color: #2071e7;
+  scale: 1.1;
 }
 .aside__social__container i {
   width: 50px;
   font-size: 2rem;
+  transition: all 0.2s;
 }
 
 .container__main {
